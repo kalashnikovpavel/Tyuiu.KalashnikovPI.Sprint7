@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelTop_KPI = new Panel();
             groupBoxTop = new GroupBox();
             buttonRead_KPI = new Button();
             buttonSave_KPI = new Button();
             buttonInfo_KPI = new Button();
-            buttonRes_KPI = new Button();
+            buttonEdit_KPI = new Button();
             panelBtootm_KPI = new Panel();
             groupBoxBottom = new GroupBox();
             dataGridViewRes_KPI = new DataGridView();
             toolTipInfo_KPI = new ToolTip(components);
+            openFileDialogProj_KPI = new OpenFileDialog();
             panelTop_KPI.SuspendLayout();
             groupBoxTop.SuspendLayout();
             panelBtootm_KPI.SuspendLayout();
@@ -60,7 +62,7 @@
             groupBoxTop.Controls.Add(buttonRead_KPI);
             groupBoxTop.Controls.Add(buttonSave_KPI);
             groupBoxTop.Controls.Add(buttonInfo_KPI);
-            groupBoxTop.Controls.Add(buttonRes_KPI);
+            groupBoxTop.Controls.Add(buttonEdit_KPI);
             groupBoxTop.Dock = DockStyle.Top;
             groupBoxTop.Location = new Point(0, 0);
             groupBoxTop.Name = "groupBoxTop";
@@ -71,40 +73,46 @@
             // 
             // buttonRead_KPI
             // 
+            buttonRead_KPI.Image = (Image)resources.GetObject("buttonRead_KPI.Image");
             buttonRead_KPI.Location = new Point(190, 22);
             buttonRead_KPI.Name = "buttonRead_KPI";
             buttonRead_KPI.Size = new Size(86, 59);
             buttonRead_KPI.TabIndex = 3;
-            buttonRead_KPI.Text = "button1";
+            toolTipInfo_KPI.SetToolTip(buttonRead_KPI, "Открыть файл с диска");
             buttonRead_KPI.UseVisualStyleBackColor = true;
+            buttonRead_KPI.Click += buttonRead_KPI_Click;
             // 
             // buttonSave_KPI
             // 
+            buttonSave_KPI.Image = (Image)resources.GetObject("buttonSave_KPI.Image");
             buttonSave_KPI.Location = new Point(98, 22);
             buttonSave_KPI.Name = "buttonSave_KPI";
             buttonSave_KPI.Size = new Size(86, 59);
             buttonSave_KPI.TabIndex = 2;
-            buttonSave_KPI.Text = "button1";
+            toolTipInfo_KPI.SetToolTip(buttonSave_KPI, "Сохранить файл на диск");
             buttonSave_KPI.UseVisualStyleBackColor = true;
             // 
             // buttonInfo_KPI
             // 
             buttonInfo_KPI.Dock = DockStyle.Right;
+            buttonInfo_KPI.Image = (Image)resources.GetObject("buttonInfo_KPI.Image");
             buttonInfo_KPI.Location = new Point(745, 19);
             buttonInfo_KPI.Name = "buttonInfo_KPI";
             buttonInfo_KPI.Size = new Size(86, 65);
             buttonInfo_KPI.TabIndex = 1;
-            buttonInfo_KPI.Text = "button1";
+            toolTipInfo_KPI.SetToolTip(buttonInfo_KPI, "О приложении");
             buttonInfo_KPI.UseVisualStyleBackColor = true;
+            buttonInfo_KPI.Click += buttonInfo_KPI_Click;
             // 
-            // buttonRes_KPI
+            // buttonEdit_KPI
             // 
-            buttonRes_KPI.Location = new Point(6, 22);
-            buttonRes_KPI.Name = "buttonRes_KPI";
-            buttonRes_KPI.Size = new Size(86, 59);
-            buttonRes_KPI.TabIndex = 0;
-            buttonRes_KPI.Text = "button1";
-            buttonRes_KPI.UseVisualStyleBackColor = true;
+            buttonEdit_KPI.Image = (Image)resources.GetObject("buttonEdit_KPI.Image");
+            buttonEdit_KPI.Location = new Point(6, 22);
+            buttonEdit_KPI.Name = "buttonEdit_KPI";
+            buttonEdit_KPI.Size = new Size(86, 59);
+            buttonEdit_KPI.TabIndex = 0;
+            toolTipInfo_KPI.SetToolTip(buttonEdit_KPI, "Редактировать таблицу");
+            buttonEdit_KPI.UseVisualStyleBackColor = true;
             // 
             // panelBtootm_KPI
             // 
@@ -137,6 +145,12 @@
             dataGridViewRes_KPI.Size = new Size(828, 346);
             dataGridViewRes_KPI.TabIndex = 0;
             // 
+            // toolTipInfo_KPI
+            // 
+            toolTipInfo_KPI.IsBalloon = true;
+            toolTipInfo_KPI.ToolTipIcon = ToolTipIcon.Info;
+            toolTipInfo_KPI.ToolTipTitle = "z";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -161,12 +175,13 @@
         private Panel panelTop_KPI;
         private Panel panelBtootm_KPI;
         private GroupBox groupBoxTop;
-        private Button buttonRes_KPI;
+        private Button buttonEdit_KPI;
         private GroupBox groupBoxBottom;
         private Button buttonInfo_KPI;
         private Button buttonRead_KPI;
         private Button buttonSave_KPI;
         private ToolTip toolTipInfo_KPI;
         private DataGridView dataGridViewRes_KPI;
+        private OpenFileDialog openFileDialogProj_KPI;
     }
 }
