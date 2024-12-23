@@ -84,6 +84,7 @@
             // 
             // buttonSave_KPI
             // 
+            buttonSave_KPI.Enabled = false;
             buttonSave_KPI.Image = (Image)resources.GetObject("buttonSave_KPI.Image");
             buttonSave_KPI.Location = new Point(98, 22);
             buttonSave_KPI.Name = "buttonSave_KPI";
