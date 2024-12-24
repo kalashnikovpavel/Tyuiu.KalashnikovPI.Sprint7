@@ -1,3 +1,4 @@
+using Tyuiu.KalashnikovPI.Project.V6.Lib;
 namespace Tyuiu.KalashnikovPI.Project.V6.Test
 {
     [TestClass]
@@ -6,6 +7,12 @@ namespace Tyuiu.KalashnikovPI.Project.V6.Test
         [TestMethod]
         public void TestMethod1()
         {
+            DataService ds = new DataService();
+            string path = @"C:\DataSprint7\Outputfile.csv";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }

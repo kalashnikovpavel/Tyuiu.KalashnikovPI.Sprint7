@@ -48,7 +48,7 @@ namespace Tyuiu.KalashnikovPI.Project.V6
 
                         DataTable dataTable = new DataTable();
 
-                        dataTable.Columns.Add("Номер");
+                        dataTable.Columns.Add("Номер", typeof(int));
                         dataTable.Columns.Add("ФИО");
                         dataTable.Columns.Add("Дата рождения пациента");
                         dataTable.Columns.Add("Диагноз");
