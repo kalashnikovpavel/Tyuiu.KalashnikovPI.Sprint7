@@ -159,7 +159,7 @@ namespace Tyuiu.KalashnikovPI.Project.V6
             }
             catch (Exception ex)
             {
-                MessageBox.Show(, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("asdasd", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         } 
     }
