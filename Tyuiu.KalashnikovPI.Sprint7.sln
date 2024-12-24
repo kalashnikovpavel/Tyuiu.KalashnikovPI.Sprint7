@@ -5,11 +5,11 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{C0210BFD-54C4-46BC-AFF9-B8966F0A98F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.KalashnikovPI.Project.V6", "Tyuiu.KalashnikovPI.Project.V6\Tyuiu.KalashnikovPI.Project.V6.csproj", "{F41CBA1A-2234-4486-87EF-B8E0794075E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KalashnikovPI.Project.V6", "Tyuiu.KalashnikovPI.Project.V6\Tyuiu.KalashnikovPI.Project.V6.csproj", "{F41CBA1A-2234-4486-87EF-B8E0794075E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.KalashnikovPI.Project.V6.Lib", "Tyuiu.KalashnikovPI.Project.V6.Lib\Tyuiu.KalashnikovPI.Project.V6.Lib.csproj", "{91FA5E0E-953D-485D-B9B5-EBFEF0D3F28C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KalashnikovPI.Project.V6.Lib", "Tyuiu.KalashnikovPI.Project.V6.Lib\Tyuiu.KalashnikovPI.Project.V6.Lib.csproj", "{91FA5E0E-953D-485D-B9B5-EBFEF0D3F28C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.KalashnikovPI.Project.V6.Test", "Tyuiu.KalashnikovPI.Project.V6.Test\Tyuiu.KalashnikovPI.Project.V6.Test.csproj", "{4C868031-505F-4959-B0AB-C6CA295156E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.KalashnikovPI.Project.V6.Test", "Tyuiu.KalashnikovPI.Project.V6.Test\Tyuiu.KalashnikovPI.Project.V6.Test.csproj", "{4C868031-505F-4959-B0AB-C6CA295156E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
