@@ -81,6 +81,7 @@
             toolTipInfo_KPI.SetToolTip(buttonRead_KPI, "Открыть файл с диска");
             buttonRead_KPI.UseVisualStyleBackColor = true;
             buttonRead_KPI.Click += buttonRead_KPI_Click;
+            buttonRead_KPI.MouseEnter += buttonRead_KPI_MouseEnter;
             // 
             // buttonSave_KPI
             // 
@@ -92,6 +93,8 @@
             buttonSave_KPI.TabIndex = 2;
             toolTipInfo_KPI.SetToolTip(buttonSave_KPI, "Сохранить файл на диск");
             buttonSave_KPI.UseVisualStyleBackColor = true;
+            buttonSave_KPI.Click += buttonSave_KPI_Click;
+            buttonSave_KPI.MouseEnter += buttonSave_KPI_MouseEnter;
             // 
             // buttonInfo_KPI
             // 
@@ -104,6 +107,7 @@
             toolTipInfo_KPI.SetToolTip(buttonInfo_KPI, "О приложении");
             buttonInfo_KPI.UseVisualStyleBackColor = true;
             buttonInfo_KPI.Click += buttonInfo_KPI_Click;
+            buttonInfo_KPI.MouseEnter += buttonInfo_KPI_MouseEnter;
             // 
             // buttonEdit_KPI
             // 
@@ -114,6 +118,8 @@
             buttonEdit_KPI.TabIndex = 0;
             toolTipInfo_KPI.SetToolTip(buttonEdit_KPI, "Редактировать таблицу");
             buttonEdit_KPI.UseVisualStyleBackColor = true;
+            buttonEdit_KPI.Click += buttonEdit_KPI_Click;
+            buttonEdit_KPI.MouseEnter += buttonEdit_KPI_MouseEnter;
             // 
             // panelBtootm_KPI
             // 
@@ -143,6 +149,7 @@
             dataGridViewRes_KPI.Dock = DockStyle.Fill;
             dataGridViewRes_KPI.Location = new Point(3, 19);
             dataGridViewRes_KPI.Name = "dataGridViewRes_KPI";
+            dataGridViewRes_KPI.ReadOnly = true;
             dataGridViewRes_KPI.Size = new Size(828, 346);
             dataGridViewRes_KPI.TabIndex = 0;
             // 
@@ -150,7 +157,6 @@
             // 
             toolTipInfo_KPI.IsBalloon = true;
             toolTipInfo_KPI.ToolTipIcon = ToolTipIcon.Info;
-            toolTipInfo_KPI.ToolTipTitle = "z";
             // 
             // FormMain
             // 

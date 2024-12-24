@@ -16,13 +16,13 @@ namespace Tyuiu.KalashnikovPI.Project.V6.Lib
             string[] lines = File.ReadAllLines(filepath);
 
             int rows = lines.Length;
-            int columns = lines[0].Split(',').Length; 
+            int columns = lines[0].Split(';').Length; 
 
             string[,] data = new string[rows, columns];
 
             for (int i = 0; i < rows; i++)
             {
-                string[] values = lines[i].Split(',');
+                string[] values = lines[i].Split(';');
 
                 if (values.Length != columns)
                 {
