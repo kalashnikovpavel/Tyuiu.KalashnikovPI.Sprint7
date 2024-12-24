@@ -117,49 +117,43 @@ namespace Tyuiu.KalashnikovPI.Project.V6
         {
             try
             {
-                openFileDialogProj_KPI.FileName = "OutputFile.csv";
-                openFileDialogProj_KPI.InitialDirectory = Directory.GetCurrentDirectory();
-                openFileDialogProj_KPI.ShowDialog();
-
-                if (openFileDialogProj_KPI.ShowDialog() == DialogResult.OK)
+                saveFileDialogProj_KPI.FileName = "Outputfile.csv";
+                if (saveFileDialogProj_KPI.ShowDialog() == DialogResult.OK)
                 {
-                    string savePath = openFileDialogProj_KPI.FileName;
-
+                    string savePath = saveFileDialogProj_KPI.FileName;
+                    
                     if (File.Exists(savePath))
                     {
                         File.Delete(savePath);
                     }
-
                     int rows = dataGridViewRes_KPI.RowCount;
-                    int columns = dataGridViewRes_KPI.ColumnCount;
+                    int cols = dataGridViewRes_KPI.ColumnCount;
 
                     StringBuilder strBuilder = new StringBuilder();
-
                     for (int i = 0; i < rows; i++)
                     {
-                        for (int j = 0; j < columns; j++)
+                        for (int j = 0; j < cols; j++)
                         {
-                            string cellValue = dataGridViewRes_KPI.Rows[i].Cells[j].Value?.ToString() ?? string.Empty;
+                            
+                            string cellVal = dataGridViewRes_KPI.Rows[i].Cells[j].Value?.ToString() ?? string.Empty; // Проверка на null значение ячейки
+                            cellVal = cellVal.Replace("\"", "\"\""); // Замена кавычек внутри значения на две кавычки для CSV 
+                            strBuilder.Append($"\"{cellVal}\""); // Оборачиваем значение в кавычки
 
-                            cellValue = cellValue.Replace("\"", "\"\"");
-
-                            strBuilder.Append($"\"{cellValue}\"");
-
+                            // Добавляем разделитель только если это не последний элемент в строке
                             if (j != columns - 1)
                             {
-                                strBuilder.Append(",");
+                                strBuilder.Append(","); // Разделяем значения запятой  
                             }
                         }
-                        strBuilder.AppendLine();
+                        strBuilder.AppendLine(); // Конец строки 
                     }
                     File.WriteAllText(savePath, strBuilder.ToString(), Encoding.UTF8);
 
-                    MessageBox.Show("nigger", "akdfjhasdfkljh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Файл успешно сохранен на ваш компьютер", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("asdasd", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex) {
+                MessageBox.Show($"Ошибка: {ex.Message}\nФайл не был сохранен на ваш компьютер", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         } 
     }

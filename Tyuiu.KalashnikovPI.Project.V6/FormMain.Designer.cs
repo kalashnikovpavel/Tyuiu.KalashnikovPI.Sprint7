@@ -41,6 +41,7 @@
             dataGridViewRes_KPI = new DataGridView();
             toolTipInfo_KPI = new ToolTip(components);
             openFileDialogProj_KPI = new OpenFileDialog();
+            saveFileDialogProj_KPI = new SaveFileDialog();
             panelTop_KPI.SuspendLayout();
             groupBoxTop.SuspendLayout();
             panelBtootm_KPI.SuspendLayout();
@@ -190,5 +191,6 @@
         private ToolTip toolTipInfo_KPI;
         private DataGridView dataGridViewRes_KPI;
         private OpenFileDialog openFileDialogProj_KPI;
+        private SaveFileDialog saveFileDialogProj_KPI;
     }
 }
