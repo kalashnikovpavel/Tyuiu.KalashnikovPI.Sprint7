@@ -122,6 +122,7 @@ namespace Tyuiu.KalashnikovPI.Project.V6
             try
             {
                 saveFileDialogProj_KPI.FileName = "Outputfile.csv";
+                saveFileDialogProj_KPI.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
                 if (saveFileDialogProj_KPI.ShowDialog() == DialogResult.OK)
                 {
                     string savePath = saveFileDialogProj_KPI.FileName;
