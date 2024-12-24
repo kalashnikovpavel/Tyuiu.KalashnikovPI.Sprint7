@@ -58,17 +58,21 @@ namespace Tyuiu.KalashnikovPI.Project.V6
                         dataTable.Columns.Add("Примечание");
                         dataTable.Columns.Add("ФИО Врача");
                         dataTable.Columns.Add("Должность и специализация");
+                        int startNumber = dataTable.Rows.Count + 1;      
 
-
+                        // Добавляем новые строки из массива
                         for (int i = 0; i < arrayValues.GetLength(0); i++)
                         {
                             DataRow row = dataTable.NewRow();
-                            for (int j = 0; j < arrayValues.GetLength(1); j++)
+                            row[0] = startNumber + i; // Устанавливаем номер строки
+                            for (int j = 1; j < arrayValues.GetLength(1); j++) // Начинаем с 1, так как 0 - это номер
                             {
-                                row[j] = arrayValues[i, j];
+                                row[j] = arrayValues[i, j - 1]; // Сдвигаем j на 1, чтобы соответствовать столбцам
                             }
                             dataTable.Rows.Add(row);
                         }
+
+
                         dataGridViewRes_KPI.DataSource = dataTable;
                     }
                     catch (FileNotFoundException ex)
