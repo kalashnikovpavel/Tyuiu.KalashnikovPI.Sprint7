@@ -124,7 +124,7 @@ namespace Tyuiu.KalashnikovPI.Project.V6
                 if (openFileDialogProj_KPI.ShowDialog() == DialogResult.OK)
                 {
                     string savePath = openFileDialogProj_KPI.FileName;
-  
+
                     if (File.Exists(savePath))
                     {
                         File.Delete(savePath);
@@ -147,19 +147,20 @@ namespace Tyuiu.KalashnikovPI.Project.V6
 
                             if (j != columns - 1)
                             {
-                                strBuilder.Append(","); 
+                                strBuilder.Append(",");
                             }
                         }
-                        strBuilder.AppendLine(); 
+                        strBuilder.AppendLine();
                     }
                     File.WriteAllText(savePath, strBuilder.ToString(), Encoding.UTF8);
 
                     MessageBox.Show("nigger", "akdfjhasdfkljh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        } 
     }
 }
